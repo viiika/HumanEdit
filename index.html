@@ -379,24 +379,29 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Dataset Statistics</h2>
+          <h2 class="title is-3">Dataset Statistics of HumanEdit-full</h2>
 
           <div class="content has-text-justified">
             <p>
               The river chart of HumanEdit-full. The first node of the river represents the type of edit, the second node corresponds to the verb extracted from the instruction, and the final node corresponds to the noun in the instruction. To maintain clarity, we only selected the top 50 most frequent nouns. 
             </p>
           </div> 
-          <div class="container is-max-desktop">
+          <!-- <div class="container is-max-desktop">
             <img src="./assets/full_flow.png" alt="Image0" style="width: 90%; max-width: 1000px;">
-          </div>
+          </div> -->
+          <iframe src="./full_flow.html" width="600" height="400"></iframe>
+          
           <div class="content has-text-justified">
             <p>
               An Overview of Keywords in HumanEdit-full Edit Instructions: The inner circle represents the verb in the edit instruction, while the outer circle highlights the noun associated with the verb in each instruction.
             </p>
           </div> 
-          <div class="container is-max-desktop">
+          <!-- <div class="container is-max-desktop">
             <img src="./assets/full_enhanced.png" alt="Image0" style="width: 70%; max-width: 1000px;">
-          </div>
+          </div> -->
+          <iframe src="./full_enhanced.html" width="600" height="400"></iframe>
+         
+
           
 
         </div>
@@ -404,6 +409,45 @@
       <!--/ Abstract. -->
     </div>
   </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Statistics of HumanEdit-core</h2>
+
+         
+          <div class="content has-text-justified">
+            <p>
+              The river chart of HumanEdit-core. The first node of the river represents the type of edit, the second node corresponds to the verb extracted from the instruction, and the final node corresponds to the noun in the instruction. To maintain clarity, we only selected the top 50 most frequent nouns. 
+            </p>
+          </div> 
+          <!-- <div class="container is-max-desktop">
+            <img src="./assets/full_flow.png" alt="Image0" style="width: 90%; max-width: 1000px;">
+          </div> -->
+          <iframe src="./core_flow.html" width="600" height="400"></iframe>
+         
+          <div class="content has-text-justified">
+            <p>
+              An Overview of Keywords in HumanEdit-core Edit Instructions: The inner circle represents the verb in the edit instruction, while the outer circle highlights the noun associated with the verb in each instruction.
+            </p>
+          </div> 
+          <!-- <div class="container is-max-desktop">
+            <img src="./assets/full_enhanced.png" alt="Image0" style="width: 70%; max-width: 1000px;">
+          </div> -->
+          <iframe src="./core_enhanced.html" width="600" height="400"></iframe>
+
+
+          
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
 
 
   </div class="section">
