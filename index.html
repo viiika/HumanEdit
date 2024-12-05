@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="HumanEdit: A High-Quality Human-Rewarded Dataset for Instruction-based Image Editing">
+  <meta name="keywords" content="Meissonic">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Meissonic</title>
+
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MRQC0YFE17');
+</script> -->
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <style>
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  </style>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://noyii.github.io/">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://viiika.github.io/Meissonic">
+              Meissonic: Revitalizing Masked Generative Transformers for Efficient High-Resolution Text-to-Image Synthesis
+            </a>
+            <a class="navbar-item" href="https://viiika.github.io/HumanEdit">
+              HumanEdit: A High-Quality Human-Rewarded Dataset for Instruction-based Image Editing
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        
+        <div class="container has-text-centered">
+          
+          <h1 class="title is-1 publication-title">
+            <font color="#FF0000">H</font><font color="#F0000F">u</font><font color="#E1001E">m</font><font color="#D2002D">a</font><font color="#C3003C">n</font><font color="#B4004B">E</font><font color="#A5005A">d</font><font color="#960069">i</font><font color="#870078">t</font>
+            : A High-Quality Human-Rewarded Dataset for Instruction-based Image Editing
+          </h1>
+          
+          <div class="is-size-5 publication-authors">
+            <div class="author-block">
+              <a href="https://noyii.github.io">Jinbin Bai</a><sup>12*</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://scholar.google.com/citations?user=br7-IGkAAAAJ&hl=en">Wei Chow</a><sup>2*</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://yangling0818.github.io/">Ling Yang</a><sup>3</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://lxtgh.github.io/">Xiangtai Li</a><sup>1</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=lm9s-QgAAAAJ&hl=zh-CN">Juncheng Li</a><sup>2</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://personal.ntu.edu.sg/hanwangzhang/">Hanwang Zhang</a><sup>14</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://yanshuicheng.info/">Shuicheng Yan</a><sup>2†</sup>
+            </div><br>
+      
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Skywork AI</span>,
+            <span class="author-block"><sup>2</sup>National University of Singapore</span>,
+            <span class="author-block"><sup>3</sup>Peking University </span>,
+            <span class="author-block"><sup>4</sup>Nanyang Technological University </span>
+            <br>
+            <span class="author-block"><sup>*</sup>Equal contributions</span>, 
+            <span class="author-block"><sup>†</sup>Corresponding Author</span> 
+            <br>
+            <span class="author-block">jinbin.bai@u.nus.edu</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2410.08261" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Arxiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/viiika/HuamnEdit/"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/BryanW/HumanEdit"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-smile"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="hero-body" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <div class="container is-max-desktop">
+        <img src="./assets/HumanEdit.png" alt="Teaser Image" width="80%" style="display: block; margin: 0 auto;">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+
+          <div class="content has-text-justified">
+            <p>
+            We present HumanEdit, a high-quality, human-rewarded dataset specifically designed for instruction-guided image editing, enabling precise and diverse image manipulations through open-form language instructions. Previous large-scale editing datasets often incorporate minimal human feedback, leading to challenges in aligning datasets with human preferences. HumanEdit bridges this gap by employing human annotators to construct data pairs and administrators to provide feedback. With meticulously curation, HumanEdit comprises 5,751 images and requires more than 2,500 hours of human effort across four stages, ensuring both accuracy and reliability for a wide range of image editing tasks. The dataset includes <b>six distinct types of editing instructions: Action, Add, Counting, Relation, Remove, and Replace</b>, encompassing a broad spectrum of real-world scenarios. All images in the dataset are accompanied by masks, and for a subset of the data, we ensure that the instructions are sufficiently detailed to support mask-free editing. Furthermore, HumanEdit offers comprehensive diversity and high-resolution 1024 x 1024 content sourced from various domains, setting a new versatile benchmark for instructional image editing datasets. With the aim of advancing future research and establishing evaluation benchmarks in the field of image editing, we release HumanEdit at <a href="https://huggingface.co/datasets/BryanW/HumanEdit">https://huggingface.co/datasets/BryanW/HumanEdit</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+  </section>
+
+  <section class="method">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Distribution of our human-rewarded editing instructions</h2>
+
+          <table style="border-collapse: collapse; margin: 0 auto; text-align: center; width: 85%;">
+            
+            <thead><tr style="border-top: 1px solid black;">
+                    <th></th>
+                    <th>Add</th>
+                    <th>Remove</th>
+                    <th>Replace</th>
+                    <th>Action</th>
+                    <th>Counting</th>
+                    <th>Relation</th>
+                    <th>Sum</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr style="border-top: 1px solid black;">
+                    <td><strong>HumanEdit-full</strong></td>
+                    <td>801</td>
+                    <td>1,813</td>
+                    <td>1,370</td>
+                    <td>659</td>
+                    <td>698</td>
+                    <td>410</td>
+                    <td>5,751</td>
+                </tr>
+                <tr style="border-bottom: 1px solid black;">
+                    <td><strong>HumanEdit-core</strong></td>
+                    <td>30</td>
+                    <td>188</td>
+                    <td>97</td>
+                    <td>37</td>
+                    <td>20</td>
+                    <td>28</td>
+                    <td>400</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        
+        
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Comparison</h2>
+     
+      <div class="content has-text-justified">
+        <p>
+          Comparison of existing image editing datasets. ``Real Image for Edit'' denotes whether real images are used for editing instead of images generated by models. ``Real-world Scenario'' indicates whether images edited by users in the real world are included. ``Human'' denotes whether human annotators are involved. ``Ability Classification'' refers to evaluating the edit ability in different dimensions. ``Mask'' indicates whether rendering masks for editing is supported. ``Non-Mask Editing'' denotes the ability to edit without mask input.
+
+        </p>
+      </div>
+      <table style="border-collapse: collapse; margin: 0 auto; text-align: center; width: 100%;">
+        
+        <thead>
+            <tr style="border-bottom: 1px solid black;">
+                <th>Dataset</th>
+                <th>Real Image for Edit</th>
+                <th>Real-world Scenario</th>
+                <th>Human</th>
+                <th>Ability Classification</th>
+                <th>Mask</th>
+                <th>Non-Mask Editing</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid black;">
+                <td>InstructPix2Pix</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>MagicBrush</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>GIER</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>MA5k-Req</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>TEdBench</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>HQ-Edit</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>SEED-Data-Edit</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>AnyEdit</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+                <td>HumanEdit</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td><strong>6</strong></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+        </tbody>
+    </table>
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Statistics</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              The river chart of HumanEdit-full. The first node of the river represents the type of edit, the second node corresponds to the verb extracted from the instruction, and the final node corresponds to the noun in the instruction. To maintain clarity, we only selected the top 50 most frequent nouns. 
+            </p>
+          </div> 
+          <div class="container is-max-desktop">
+            <img src="./assets/full_flow.png" alt="Image0" style="width: 90%; max-width: 1000px;">
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              An Overview of Keywords in HumanEdit-full Edit Instructions: The inner circle represents the verb in the edit instruction, while the outer circle highlights the noun associated with the verb in each instruction.
+            </p>
+          </div> 
+          <div class="container is-max-desktop">
+            <img src="./assets/full_enhanced.png" alt="Image0" style="width: 70%; max-width: 1000px;">
+          </div>
+          
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  </div class="section">
+  
+  
+  
+
+  <section class="section" id="BibTeX">
+    <div class="container content is-max-desktop">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{bai2024humanedit,
+  title={HumanEdit: A High-Quality Human-Rewarded Dataset for Instruction-based Image Editing},
+  author={Bai, Jinbin and Chow, Wei and Yang, Ling and Li, Xiangtai and Li, Juncheng and Zhang, Hanwang and Yan, Shuicheng},
+  journal={arXiv preprint arXiv:},
+  year={2024}
+}</code></pre>
+  </div>
+  </section>
+
+  <script type="text/javascript" src="./static/slick/slick.js"></script>
+</body>
+
+</html>
