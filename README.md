@@ -2,7 +2,7 @@
 
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-2410.08261-b31b1b.svg)](https://arxiv.org/abs/2410.08261)
+[![arXiv](https://img.shields.io/badge/arXiv-2412.04280-b31b1b.svg)](https://arxiv.org/abs/2412.04280)
 [![Dataset](https://img.shields.io/badge/🤗%20Huggingface-Dataset-yellow)](https://huggingface.co/datasets/BryanW/HumanEdit)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?logo=github)](https://github.com/viiika/HumanEdit/)
 [![Page](https://img.shields.io/badge/Home-Page-b31b1b.svg)](https://viiika.github.io/HumanEdit/)
